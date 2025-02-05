@@ -93,27 +93,6 @@ export function EditDish() {
             return;
         }
     
-        const newCategory = Array.isArray(category) ? category[0].name : category;
-    
-        const dishData = {
-            title,
-            category: newCategory,
-            ingredients,
-            price,
-            description
-        };
-    
-        try {
-            await api.put(`/dishes/${id}`, dishData);
-            alert("Prato atualizado com sucesso!");
-            navigate(`/details/${id}`);
-        } catch (error) {
-            if (error.response) {
-                alert(error.response.data.message);
-            } else {
-                alert("Não foi possível atualizar o prato.");
-            }
-        }
     }
 
     async function handleDeleteDish() {

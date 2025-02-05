@@ -73,5 +73,5 @@ A aplicação Food Explorer está disponível para uso [aqui](https://foodexplor
 </ul>
 <p>O usuário tem acesso restrito às funcionalidades da aplicação, podendo visualizar o cardápio, filtrar pratos, ver detalhes de pratos específicos e favoritar pratos.</p>
 
-## 🚀 Deploy
+## Deploy 🚀
 [Projeto](https://foodexplorer-idel.netlify.app/) desenvolvido com ❤️ por Idel Alves 👋🏾

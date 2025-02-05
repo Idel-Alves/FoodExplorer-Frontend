@@ -12,19 +12,19 @@ export const Container = styled.div`
     flex-direction: column;
 
     margin: 0 auto;
-    padding: 0 3.2rem 9rem;
+    padding: 0 0 9rem;
 
     .top {
       display: flex;
       flex-direction: column;
       gap: 2.4rem;
-      margin: 4rem 0 3.2rem -1.2rem;
+      margin: 4rem 0 4rem 1.2rem;
 
       a {
         display: flex;
         align-items: center;
         font-weight: 500;
-        font-size: 2.4rem;
+        font-size: 2rem;
         margin-left: -1rem;
         color: ${({ theme }) => theme.COLORS.LIGHT_100};
         animation: swiperight 1s 0.3s backwards;
@@ -32,7 +32,7 @@ export const Container = styled.div`
 
       h1 {
         font-weight: 500;
-        font-size: 3.2rem;
+        font-size: 2.7rem;
         animation: swipeleft 1s 0.3s backwards;
       }
     }
@@ -50,7 +50,7 @@ export const Container = styled.div`
       }
     }
   }
-  @media (min-width: 768px) and (max-width: 1143px) {
+  @media (min-width: 668px) and (max-width: 1143px) {
     > main {
       width: 42.8rem;
       align-items: center;
@@ -287,7 +287,7 @@ export const Form = styled.form`
     }
   }
 
-  @media (min-width: 768px) and (max-width: 1143px) {
+  @media (min-width: 668px) and (max-width: 1143px) {
     align-items: center;
 
     > .input-wrapper {

@@ -6,7 +6,7 @@ export const Container = styled(Link)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: .8rem;
+  gap: .5rem;
 
   white-space: nowrap;
   margin: 0 auto;
@@ -16,17 +16,17 @@ export const Container = styled(Link)`
     display: flex;
 
     img {
-      width: 2.4rem;
+      width: 2.2rem;
       margin-right: 1rem;
     }
 
     h1 {
-      font-size: 2.4rem;
+      font-size: 2rem;
     }
   }
 
   > span {
-    font-size: 12px;
+    font-size: 1.2rem;
     color: ${({ theme }) => theme.COLORS.CAKE_100};
   }
 

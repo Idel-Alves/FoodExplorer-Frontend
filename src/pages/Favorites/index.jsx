@@ -15,6 +15,12 @@ export function Favorites() {
             <Header />
             {favorites.length > 0 ? (
                 <main>
+                    <div className="top">
+                        <Link to="/">
+                            <FiChevronLeft size={32} />
+                            Voltar
+                        </Link>
+                    </div>
                     <h1>Meus favoritos</h1>
                     <div className="favorites">
                         {favorites.map((dish) => (
@@ -26,7 +32,7 @@ export function Favorites() {
                 <main>
                     <div className="favorites-empty">
                         <p>
-                            Nenhum prato foi adicionado ainda. <br/> Explore nosso cardápio e descubra pratos irresistíveis para adicione aos seus favoritos.
+                            Nenhum prato foi adicionado ainda. <br /> Explore nosso cardápio e descubra pratos irresistíveis para adicione aos seus favoritos.
                         </p>
 
                         <Link to="/">

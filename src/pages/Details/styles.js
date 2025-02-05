@@ -14,7 +14,7 @@ export const Container = styled.div`
     align-content: center;
     align-items: center;
 
-    padding: 0 5.6rem;
+    padding: 0 5rem;
     margin-bottom: 15rem;
 
     .top {
@@ -28,7 +28,7 @@ export const Container = styled.div`
         align-items: center;
 
         font-weight: 500;
-        font-size: 2.4rem;
+        font-size: 2rem;
         color: ${({ theme }) => theme.COLORS.LIGHT_100};
       }
     }
@@ -39,7 +39,7 @@ export const Container = styled.div`
       align-items: center;
 
       .cover img {
-        width: 26.4rem;
+        width: 25rem;
         margin: 0;
         margin: 9rem 0 1.6rem;
         animation: topdown 1s 0.3s backwards;
@@ -51,7 +51,7 @@ export const Container = styled.div`
         align-items: center;
 
         h1 {
-          font-size: 2.7rem;
+          font-size: 2.5rem;
           font-weight: 500;
           margin-bottom: 2.4rem;
           animation: topdown 1s 0.7s backwards;
@@ -85,7 +85,7 @@ export const Container = styled.div`
           }
 
           .include {
-            width: 31.6rem;
+            width: 24.2rem;
             height: 4.8rem;
             margin-top: 4.8rem;
             animation: swipeleft 1s 1.1s backwards;

@@ -46,7 +46,7 @@ export function Header({ search }) {
       <div className="search">
         <Input
           icon={FiSearch}
-          placeholder="Pesquise por pratos"
+          placeholder="Pesquise pratos ou ingredientes"
           onChange={(e) => search(e.target.value)}
         />
       </div>

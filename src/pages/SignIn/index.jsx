@@ -12,12 +12,25 @@ import LogoExplorer from "../../assets/logo-explorer-.svg";
 export function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false)
  
   const {signIn} = useAuth();
 
   function handleSignIn(event) {
     event.preventDefault();
-    signIn({email, password});
+    setIsLoading(true)
+    signIn({ email, password })
+      .then(() => {
+        setIsLoading(false)
+      })
+      .catch((error) => {
+        setIsLoading(false)
+        if (error.response) {
+          alert(error.response.data.message)
+        } else {
+          alert("Não foi possível o sign in")
+        }
+      })
   }
 
     return (
@@ -46,7 +59,8 @@ export function SignIn() {
     
             <Button
               type="submit"
-              title={"Entrar"}
+              title={isLoading ? "Carregando..." : "Entrar"}
+              disabled={isLoading}
             />
     
             <Link className="register" to="/register">

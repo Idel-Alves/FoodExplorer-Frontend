@@ -12,11 +12,23 @@ export const Container = styled.div`
     padding: 3.2rem 3.2rem 0;
     margin-bottom: 10rem;
 
+    .top {
+      a {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: ${({ theme }) => theme.COLORS.LIGHT_100};
+      }
+      
+    }
+    
     h1 {
       font-weight: 500;
-      font-size: 3.2rem;
+      font-size: 2.7rem;
       white-space: nowrap;
-      margin: 0 0 4.3rem;
+      margin: 3rem 0;
       animation: topdown 1s 0.3s backwards;
     }
 

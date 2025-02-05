@@ -7,9 +7,9 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3.2rem;
+  gap: 3rem;
 
-  padding: 6.4rem 2.7rem;
+  padding: 6.4rem 2.4rem;
   background-color: ${({ theme }) => theme.COLORS.DARK_800};
   animation: topdown 700ms;
 
@@ -20,7 +20,7 @@ export const Container = styled.div`
     padding: 0;
 
     svg {
-      width: 2.4rem;
+      width: 2.2rem;
     }
   }
 

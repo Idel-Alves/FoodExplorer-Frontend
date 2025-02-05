@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.button`
   img {
-    width: 3.2rem;
+    width: 2.8rem;
   }
   .circle {
-    width: 2rem;
-    height: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
 
     position: relative;
     right: -2rem;

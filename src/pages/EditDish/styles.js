@@ -13,13 +13,13 @@ overflow: hidden;
   flex-direction: column;
 
   margin: 0 auto;
-  padding: 0 3.2rem 9rem;
+  padding: 0 0 9rem;
 
   .top {
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
-    margin: 4rem 0 3.2rem -1.2rem;
+    margin: 4rem 0 3.2rem 1.2rem;
 
     a {
       display: flex;
@@ -52,7 +52,7 @@ overflow: hidden;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1143px) {
+@media (min-width: 668px) and (max-width: 1143px) {
   > main {
     width: 42.8rem;
     align-items: center;
@@ -301,7 +301,7 @@ export const Form = styled.form`
     }
   }
 
-  @media (min-width: 768px) and (max-width: 1143px) {
+  @media (min-width: 668px) and (max-width: 1143px) {
     align-items: center;
 
     > .input-wrapper {

@@ -71,7 +71,7 @@ export function Details() {
                 </div>
               )}
 
-             {user.isAdmin === "true" ? (<Button className="edit" title="Editar Prato" onClick={handleEditDish}/>
+             {user.isAdmin === "true" ? (<Button className="edit" title="Editar" onClick={handleEditDish}/>
              ) :
               (<div className="btns">
                   <div className="select-quantity">

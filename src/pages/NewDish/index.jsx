@@ -1,5 +1,6 @@
 import { FiChevronLeft, FiUpload } from "react-icons/fi";
-import { Container, Form } from "./styles";
+import { Container, Form, Footer } from "./styles";
+import Logo from "../../assets/logo-gray.svg";
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -9,10 +10,11 @@ import { api } from "../../services/api";
 import { Input } from "../../components/Input";
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
-import { Footer } from "../../components/Footer";
 import { Section } from "../../components/Section";
 import { Textarea } from "../../components/Textarea";
 import { IngredientItem } from "../../components/IngredientItem";
+
+
 
 export function NewDish() {
     const [image, setImage] = useState(null);
@@ -24,7 +26,7 @@ export function NewDish() {
 
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
-    
+
 
     const navigate = useNavigate();
 
@@ -63,25 +65,25 @@ export function NewDish() {
         formData.append("category", category);
         formData.append("ingredients", ingredients.join(", "));
         formData.append("image", image);
-    
+
         try {
-             const response = await api.post("/dishes", formData, {
+            const response = await api.post("/dishes", formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 }
-                
+
             });
-    
+
             alert("Prato criado com sucesso!");
             navigate("/");
-    
+
         } catch (error) {
             if (error.response) {
                 alert(error.response.data.message);
             } else {
                 alert("Não foi possível criar o prato.");
             }
-        }    
+        }
     }
 
     return (
@@ -163,12 +165,18 @@ export function NewDish() {
                     <div className="save-changes">
                         <Button
                             type="submit"
-                            title={"Salvar"}                      
+                            title={"Salvar"}
                         />
                     </div>
                 </Form>
             </main>
-            <Footer />
+            <Footer>
+                <div className="logo">
+                    <img src={Logo} alt="Logo explorer" />
+                    <h1>food explorer</h1>
+                </div>
+                <p>© 2025 - All rights reserved.</p>
+            </Footer>
         </Container>
     )
 }

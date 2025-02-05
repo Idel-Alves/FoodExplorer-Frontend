@@ -54,7 +54,7 @@ A aplicação apresenta as seguintes funcionalidades:
 ## Utilização 🎯
 ⚠️ **Importante:** Este projeto utiliza uma hospedagem gratuita para o back-end, o que pode ocasionar alguns atrasos no tempo de resposta do servidor.
 
-A aplicação Food Explorer está disponível para uso [aqui](foodexplorer-idel.netlify.app).
+A aplicação Food Explorer está disponível para uso [aqui](https://foodexplorer-idel.netlify.app).
 
 ## Usuários 👨🏽‍💻
 <p>O Food Explorer possui duas usuários principais: o admin e o usuário comum. Você pode criar um novo usuário comum ou testar a aplicação usando as seguintes informações de login:</p>
@@ -74,4 +74,4 @@ A aplicação Food Explorer está disponível para uso [aqui](foodexplorer-idel.
 <p>O usuário tem acesso restrito às funcionalidades da aplicação, podendo visualizar o cardápio, filtrar pratos, ver detalhes de pratos específicos e favoritar pratos.</p>
 
 ## 🚀 Deploy
-[Projeto](foodexplorer-idel.netlify.app) desenvolvido com ❤️ por Idel Alves 👋🏾
+[Projeto](https://foodexplorer-idel.netlify.app/) desenvolvido com ❤️ por Idel Alves 👋🏾

@@ -73,9 +73,11 @@ $ npm run dev
 ## Usuários 👨🏽‍💻
 <p>O Food Explorer possui duas usuários principais: o admin e o usuário comum. Você pode criar um novo usuário comum ou testar a aplicação usando as seguintes informações de login:</p>
 <h3>Admin</h3>
+⚠️ Acesso ao admin é excluso desse acesso! ⚠️
 <ul>
   <li>E-mail: admin@email.com</li>
   <li>Senha: 121212</li>
+
 </ul>
 
 <p>O admin tem acesso privilegiado a tarefas administrativas, por exemplo: pode gerenciar o cardápio, adicionando, editando e removendo pratos.</p>

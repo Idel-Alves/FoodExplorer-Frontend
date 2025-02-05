@@ -56,6 +56,20 @@ A aplicação apresenta as seguintes funcionalidades:
 
 A aplicação Food Explorer está disponível para uso [aqui](https://foodexplorer-idel.netlify.app).
 
+Você também pode executá-la em sua máquina localmente. Certifique-se de ter o Node.js e o npm instalados antes de prosseguir com as etapas abaixo:
+
+### 1. Clone o projeto
+$ git clone https://github.com/Idel-Alves/FoodExplorer-Frontend.git
+
+### 2. Acesse a pasta do projeto:
+$ cd FoodExplorer-Frontend
+
+### 3. Instale as dependências:
+$ npm install
+
+### 4. Inicie o servidor:
+$ npm run dev
+
 ## Usuários 👨🏽‍💻
 <p>O Food Explorer possui duas usuários principais: o admin e o usuário comum. Você pode criar um novo usuário comum ou testar a aplicação usando as seguintes informações de login:</p>
 <h3>Admin</h3>

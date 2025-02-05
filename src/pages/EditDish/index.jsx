@@ -23,6 +23,7 @@ export function EditDish() {
     const [newIngredient, setNewIngredient] = useState("");
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
     const [isDeleting, setIsDeleting] = useState(false);
 
     const fileInputRef = useRef(null);
@@ -61,7 +62,8 @@ export function EditDish() {
         if (image) {
             formData.append("image", image); 
         }
-        console.log(image)
+        
+        setIsLoading(true);
         try {
             await api.patch(`/dishes/${id}`, formData, {
                 headers: {
@@ -74,8 +76,10 @@ export function EditDish() {
         } catch (error) {
             if (error.response) {
                 alert(error.response.data.message);
+                setIsLoading(false);
             } else {
                 alert("Não foi possível atualizar o prato.");
+                setIsLoading(false);
             }
         }
 
@@ -232,14 +236,15 @@ export function EditDish() {
                         <Button
                             type="button"
                             className="delete"
-                            title={"Excluir prato"}
+                            title={isDeleting ? "Deletando..." : "Excluir prato"}
                             onClick={handleDeleteDish}
+                            disabled={isDeleting}
                         />
                         <Button
                             type="submit"
                             className="save"
-                            title={"Salvar alterações"}
-
+                            title={isLoading ? "Carregando..." : "Salvar alterações"}
+                            disabled={isLoading}
                         />
                     </div>
                 </Form>

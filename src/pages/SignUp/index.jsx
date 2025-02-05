@@ -12,12 +12,13 @@ export function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isCreating, setIsCreating] = useState(false)
+  const [isCreating, setIsCreating] = useState(false);
 
   const navigate = useNavigate();
 
   function handleSignUp(event) {
-   
+    event.preventDefault()
+
     setIsCreating(false)
     if(!name || !email || !password) {
       return alert("Preencha todos os campos!");
@@ -29,8 +30,6 @@ export function SignUp() {
     }
 
     setIsCreating(true)
-   
-    event.preventDefault()
 
     api.post("/users", {name, email, password})
     .then(() => {
@@ -79,7 +78,8 @@ export function SignUp() {
     
             <Button
               type="submit"
-              title="Criar conta"
+              title={isCreating ? "Criando" : "Criar conta"}
+              disabled={isCreating}
             />
     
             <Link to="/">

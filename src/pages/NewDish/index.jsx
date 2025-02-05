@@ -26,6 +26,7 @@ export function NewDish() {
 
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
+    const [isSaving, setIsSaving] = useState(false);
 
 
     const navigate = useNavigate();
@@ -66,6 +67,7 @@ export function NewDish() {
         formData.append("ingredients", ingredients.join(", "));
         formData.append("image", image);
 
+        setIsSaving(true);
         try {
             const response = await api.post("/dishes", formData, {
                 headers: {
@@ -80,8 +82,10 @@ export function NewDish() {
         } catch (error) {
             if (error.response) {
                 alert(error.response.data.message);
+                setIsSaving(false);
             } else {
                 alert("Não foi possível criar o prato.");
+                setIsSaving(false);
             }
         }
     }
@@ -165,7 +169,8 @@ export function NewDish() {
                     <div className="save-changes">
                         <Button
                             type="submit"
-                            title={"Salvar"}
+                            title={isSaving ? "Salvando..." : "Salvar"}
+                            disabled={isSaving}
                         />
                     </div>
                 </Form>

@@ -24,14 +24,31 @@ export function Profile() {
     const avatarURL = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
     const [avatar, setAvatar] = useState(avatarURL);
     const [avatarFile, setAvatarFile] = useState(null);
+    const [isUpdating, setIsUpdating] = useState(false);
 
     async function handleUpdate(event) {
         event.preventDefault();
+        setIsUpdating(true)
+
+        if (newPassword && newPassword.length < 6) {
+            setIsUpdating(false)
+            return alert("A nova senha deve conter no mínimo 6 caracteres!")
+        }
+
+        if ((newPassword && !oldPassword) || (!newPassword && oldPassword)) {
+            setIsUpdating(false)
+            return alert("Forneça a senha antiga e a nova para atualizar.")
+        }
+
         const updated = {
             name, email, password: newPassword, old_password: oldPassword
         }
         const userUpdated = Object.assign(user, updated);
-        await updateProfile({user: userUpdated, avatarFile});  
+        await updateProfile({ user: userUpdated, avatarFile });
+        setIsUpdating(false);
+
+        setNewPassword("");
+        setNewPassword("");
     }
 
     function handleChangeAvatar(event) {
@@ -57,11 +74,11 @@ export function Profile() {
                     <img src={avatar} alt={user.name} />
                     <label htmlFor="avatar">
                         <FiCamera />
-                        <input id="avatar" type="file" onChange={handleChangeAvatar}/>
+                        <input id="avatar" type="file" onChange={handleChangeAvatar} />
                     </label>
                 </Avatar>
 
-                
+
                 <Input
                     placeholder="Nome"
                     type="text"
@@ -92,10 +109,14 @@ export function Profile() {
                     onChange={e => setNewPassword(e.target.value)}
                 />
 
-                <Button type="submit" title="Salvar"/>  
+                <Button 
+                    type="submit" 
+                    title={isUpdating ? "Atualizando..." : "Salvar"}
+                    disabled={isUpdating}
+                />
             </Form>
 
-            <Footer/>
+            <Footer />
         </Container>
     )
 }
